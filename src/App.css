@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+body{
+  background-color: #EAEFF3;
+  font-family: Helvetica, sans-serif;
+ 
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.button-container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+  max-width: 230px;
+  gap:30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.button-wrapper{
+  height: 90vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+  margin: 0 auto;
+  max-width: 400px;
+  translate: 25%;
+  gap: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.button{
+  position: relative;
+  width: 75px;
+  height: 30px;
+  border-radius: 30px;
+  background-color:#8F8F8F;
+  flex-shrink: 0;
+  transition: all 0.3s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button-circle {
+  position: absolute;
+  translate: 0 -10%;
+  display: flex;
+  left: 0px;
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  background-color: #D2D1D1;
+  transition: all 0.3s ease-in-out;
+}
+
+.activated-button{
+      translate: 100% -10%;
+      transition: all 0.2s ease-in-out;
+}
+
+.title{
+  font-weight: 700;
+  font-size: 30px;
+}
+
+footer{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  position: absolute;
+  padding:  15px;
+  margin-top: 15px;
+  box-sizing: border-box;
+}
+
+footer {
+  color:#8B8E90;
+}
+footer span{
+  color:#6583c5;
+}
+
+footer div:last-of-type{
+  margin-left: auto;
+}
+
+.logo-footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  height: 50px;
+  gap: 20px;
+  font-size: 30px;
+}
+
+.logo-footer a{
+  text-decoration: none;
+}
+
+footer span:hover{
+  cursor: pointer;
+}
+
+.logo-footer a:visited{
+  color: black;
 }
